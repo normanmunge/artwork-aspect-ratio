@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  padding: 0 2rem;
+  color: #111111;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main-header {
+  position: relative;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.main-content {
+  position: relative;
+  padding: 100px 70px;
+}
+
+.row {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.row h2 {
+  text-align: center;
+}
+
+.item-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: inherit;
+}
+
+.item-inner {
+  flex-basis: 33%;
+  max-width: 33%;
+  padding: 10px;
+}
+
+.item-image-wrapper {
+  position: relative;
+  display: block;
+  pointer-events: auto;
+  width: 100%;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.item-image-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.item-image-wrapper.is--rectangle::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 60%;
+  position: relative;
+  z-index: -1;
+}
+
+.item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
